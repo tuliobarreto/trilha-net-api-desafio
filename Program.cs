@@ -4,6 +4,9 @@ using TrilhaApiDesafio.Context;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// para criar tabela: dotnet-ef migrations add nme qualquer
+//para criar banco: dotnet-ef database update  
+                        
 // Add services to the container.
 builder.Services.AddDbContext<OrganizadorContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("ConexaoPadrao")));
